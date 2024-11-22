@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+::root {
+  --primary-colors: rgb(255, 252, 252);
+  --secondary-colors: #c5d5f6;
+  --bg-colors: #5566ff;
+  --text-colors: #191919;
+  --text-secondary: #353434bf;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-y: scroll;
+  background: var(--secondary-colors);
+  color: var(--text-colors);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Layout for admin dashboard skeleton */
+.wrapper {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Side Bar
+--------------------------------------------------------------*/
+#sidebar {
+  max-width: 236px;
+  min-width: 236px;
+  width: 236px;
+  background: var(--primary-colors);
+  transition: all 0.35s ease-in-out;
+}
+
+.sidebar-logo {
+  padding: 1.2rem;
+}
+
+.sidebar-logo a {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.sidebar-link i {
+  font-size: 1.3rem;
+  margin-right: 0.7rem;
+}
+
+a.sidebar-link {
+  padding: 0.9rem 1.2rem;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #4a4848bf;
+  font-weight: 600;
+}
+
+a.sidebar-link:hover {
+  border-left: 3px solid #3b7ddd;
+  background: #dddddd64;
+}
+
+/* Sidebar Toggle */
+#sidebar.collapsed {
+  margin-left: -236px;
+}
+
+/*--------------------------------------------------------------
+# Main Content
+--------------------------------------------------------------*/
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  transition: all 0.35s ease-in-out;
+  width: 100%;
+  color: white;
+}
+
+header {
+  height: 240px;
+  padding: 0 15px 15px;
+  border-radius: 0 0 20px 20px;
+  color: white;
+}
+
+/* Navbar */
+.navbar .navbar-toggler-icon {
+  display: inline-block;
+  font-size: 1.5rem;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  color: rgb(244, 244, 244);
+}
+
+/* .navbar {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  background: transparent;
+} */
+
+.navbar-expand .navbar-nav {
+  margin-left: auto;
+}
+
+.dropdown-menu {
+  width: 300px;
+  height: auto;
+  background-color: white;
+  border: 1px solid;
+}
+
+.dropdown-menu a {
+  font-size: 1rem;
+  color: #101010;
+}
+
+.dropdown-menu a:hover {
+  border-left: 3px solid #3b7ddd;
+  background: #dddddd64;
+  color: #101010;
+}
+
+/* Page Title */
+.pagetitle {
+  padding-left: 10px;
+}
+
+.pagetitle h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* Card */
+.card {
+  margin-bottom: 30px;
+  border: none;
+  background-color: rgb(255, 252, 252);
+  border-radius: 10px;
+  box-shadow: 1px 3px 30px rgba(1, 41, 112, 0.1);
+}
+
+.card-header,
+.card-footer {
+  border-color: #ebeef4;
+  background-color: #fff;
+  color: #798eb3;
+  padding: 15px;
+}
+
+.card-title {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #012970;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-title span {
+  color: #899bbd;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-body {
+  padding: 0 20px 20px 20px;
+}
+
+.card-img-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Info Cards */
+.dashboard .info-card h6 {
+  font-size: 30px;
+  color: #012970;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard .card-icon {
+  font-size: 32px;
+  line-height: 0;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.dashboard .sales-card .card-icon {
+  color: #4154f1;
+  background: #f6f6fe;
+}
+
+.dashboard .revenue-card .card-icon {
+  color: #2eca6a;
+  background: #e0f8e9;
+}
+
+.dashboard .customers-card .card-icon {
+  color: #ff771d;
+  background: #ffecdf;
+}
+
+table {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+table thead {
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .pagetitle h1 {
+    font-size: 15px;
+  }
+
+  .breadcrumb .breadcrumb-item,
+  table,
+  table thead {
+    font-size: 0.8rem;
+  }
+
+  .sidebar-link i {
+    font-size: 1rem;
+  }
+
+  a.sidebar-link {
+    font-size: 0.85rem;
+  }
+}

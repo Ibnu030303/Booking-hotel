@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /Sewa%20Hotel/
+
+# Hilangkan '/views' di URL
+RewriteRule ^admin/index\.php$ views/admin/index.php [L]
+RewriteRule ^user/index\.php$ views/user/index.php [L]

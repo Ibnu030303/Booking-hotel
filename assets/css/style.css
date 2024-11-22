@@ -1,0 +1,126 @@
+/* NABAR SECTION */
+/* Navbar default */
+#navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+/* Navbar scrolled */
+#navbar.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Warna background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow saat scroll */
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-scrolled .nav-link {
+    color: #000; /* Warna teks setelah scroll */
+}
+
+.navbar-scrolled .btn-outline-success {
+    border-color: #000; /* Tombol login border */
+    color: #000; /* Warna teks tombol */
+}
+
+.navbar-scrolled .btn-outline-success:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #28a745;
+}
+
+.navbar-nav .nav-link.active {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.btn-outline-success {
+    color: #28a745;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+}
+
+/* HERO SECTION */
+.hero-section {
+  padding: 14% 3% 5%;
+}
+
+.custom-card-bottom {
+    width: 187px;
+    left: -20px;
+    transform: translateY(40%) translateX(-20%);
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.custom-card-top {
+    width: 187px;
+    right: -20px;
+    transform: translateY(-50%) translateX(20%);
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* ABOUT SECTION */
+#about, .rooms-section {
+  padding: 5% 3%;
+}
+.image-frame {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    border: 5px solid white;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-style {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shadow-frame {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.position-two {
+    top: 120px;
+    right: 5px;
+}
+
+
+/* ROOM SECTION */
+.img-hover img {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.img-hover img:hover {
+    transform: scale(1.2);
+}
+
+/* Card body custom */
+.card-body-custom {
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    border-radius: 10px;
+}
+
