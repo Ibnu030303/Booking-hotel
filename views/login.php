@@ -41,7 +41,7 @@ require_once dirname(__DIR__) . '/components/Header.php';
                     </form>
 
                     <div class="text-center mt-4">
-                        <a href="/Sewa Hotel" class="text-decoration-none text-secondary">
+                        <a href="<?= base_url() ?>" class="text-decoration-none text-secondary">
                             <i class="bi bi-house-door-fill me-1"></i> Back to home
                         </a>
                     </div>
